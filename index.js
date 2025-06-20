@@ -7,7 +7,7 @@ const port = process.env.PORT || 5000
 
 app.use(cors({
     origin: [
-        'https://cerulean-capybara-755958.netlify.app',
+        '',
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true
@@ -67,5 +67,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`users api server in running on port ${port}`);
+    // console.log(`users api server in running on port ${port}`);
 })
