@@ -1,13 +1,13 @@
 require('dotenv').config()
+const cors = require('cors');
 const express = require('express');
 const app = express();
-const cors = require('cors');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const port = process.env.PORT || 5000
 
 app.use(cors({
     origin: [
-        'https://cerulean-capybara-755958.netlify.app',
+        'https://stellular-sable-9bf9ac.netlify.app'
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true
