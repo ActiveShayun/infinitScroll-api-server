@@ -7,7 +7,7 @@ const port = process.env.PORT || 5000
 
 app.use(cors({
     origin: [
-        'https://stellular-sable-9bf9ac.netlify.app'
+        'https://ifinityscrollbydata.netlify.app'
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true
@@ -54,7 +54,9 @@ async function run() {
         // Send a ping to confirm a successful connection
         // await client.db("admin").command({ ping: 1 });
         // console.log("Pinged your deployment. You successfully connected to MongoDB!");
-    } finally {
+    }
+    catch (err) {
+
         // Ensures that the client will close when you finish/error
         // await client.close();
     }
@@ -67,5 +69,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-    // console.log(`users api server in running on port ${port}`);
+    console.log(`users api server in running on port ${port}`);
 })
